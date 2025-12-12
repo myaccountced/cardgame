@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import { Application, Assets, Sprite } from "pixi.js";
-import Card from "./Card";
+import Round from "./Round";
 
 export default function MainGameCanvas() {
     const canvasRef = useRef(null); // Div to attach the pixi canvas
@@ -37,14 +37,9 @@ export default function MainGameCanvas() {
             // Add to stage to act like a background
             app.stage.addChild(woodBackground);
 
-            // Set up the card test
-            const frontTexture = await Assets.load("./cards/mewto.jpg");
-            const backTexture = await Assets.load("./cards/pokemon-card-back.jpg");
-            // Create card instance and center it
-            const card = new Card(frontTexture, backTexture);
-            //card.x = app.screen.width / 2;
-            //card.y = app.screen.height / 2;
-            app.stage.addChild(card);
+            // Create a round
+            const currRound = new Round(app, 1);
+            await currRound.init(6);
         })();
 
 

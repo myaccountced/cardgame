@@ -4,7 +4,7 @@ import gsap from "gsap";
 /* Container class for a card */
 export default class Card extends Container {
 
-    constructor(frontTexture, backTexture, width = 200, height = 300) {
+    constructor(frontTexture, backTexture, width, height) {
         super();
 
         // A container to animate flipping
