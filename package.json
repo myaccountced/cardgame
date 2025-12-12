@@ -2,6 +2,7 @@
   "name": "cardgame",
   "version": "1.0.0",
   "description": "This is my first personal project. This is a card game in website. Languages: JavaScript + HTML + CSS",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gsap": "^3.14.1",
     "pixi.js": "^8.14.3",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
