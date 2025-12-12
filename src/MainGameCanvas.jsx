@@ -24,7 +24,7 @@ export default function MainGameCanvas() {
             }
 
             // Background for the deck
-            const woodTexture = await Assets.load("./src/assets/deck-background-wood.jpg");
+            const woodTexture = await Assets.load("./background/deck-background-wood.jpg"); // Files in public dir are served at the root path
             const woodBackground = new Sprite(woodTexture);
             // Initial size for the background
             woodBackground.width = app.screen.width;
@@ -38,8 +38,8 @@ export default function MainGameCanvas() {
             app.stage.addChild(woodBackground);
 
             // Set up the card test
-            const frontTexture = await Assets.load("./src/assets/mewto.jpg");
-            const backTexture = await Assets.load("./src/assets/pokemon-card-back.jpg");
+            const frontTexture = await Assets.load("./cards/mewto.jpg");
+            const backTexture = await Assets.load("./cards/pokemon-card-back.jpg");
             // Create card instance and center it
             const card = new Card(frontTexture, backTexture);
             //card.x = app.screen.width / 2;
