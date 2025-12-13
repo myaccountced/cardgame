@@ -35,11 +35,11 @@ export default function MainGameCanvas() {
                 woodBackground.height = app.screen.height;
             });
             // Add to stage to act like a background
-            app.stage.addChild(woodBackground);
+            //app.stage.addChild(woodBackground); // uncomment later on
 
             // Create a round
             const currRound = new Round(app, 1);
-            await currRound.init(6);
+            await currRound.init(18);
         })();
 
 
